@@ -471,7 +471,7 @@ export default function FeedPage() {
               </Card>
             </aside>
 
-            <main className="md:col-span-2">
+            <main className="md:col-span-2 py-2">
               <Card className="mb-6 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 border-white/20 dark:border-gray-700/20 shadow-lg">
                 <CardHeader>
                   <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
