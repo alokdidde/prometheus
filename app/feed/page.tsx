@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState, useEffect } from "react";
@@ -335,7 +336,7 @@ export default function FeedPage() {
         }}
       ></div>
       <div className="relative z-10">
-        <header className="sticky top-0 z-50 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 border-b border-white/20 dark:border-gray-700/20">
+        {/* <header className="sticky top-0 z-50 backdrop-blur-md bg-white/30 dark:bg-gray-800/30 border-b border-white/20 dark:border-gray-700/20">
           <div className="container flex h-14 items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Star className="h-6 w-6 text-yellow-400" />
@@ -402,7 +403,7 @@ export default function FeedPage() {
               </nav>
             </div>
           </div>
-        </header>
+        </header> */}
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 py-8 md:grid-cols-3 lg:grid-cols-4">
             <aside className="hidden md:block">
