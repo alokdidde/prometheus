@@ -43,7 +43,7 @@ import {
   Trophy,
   Heart,
   Target,
-  Quote,
+//   Quote,
 } from "lucide-react";
 
 const trendingTopics = [
@@ -67,7 +67,7 @@ const suggestedUsers = [
   },
 ];
 
-const Badge3D = ({ icon: Icon, color }) => (
+const Badge3D = ({ icon: Icon, color }: { icon: React.ComponentType<{ className?: string }>, color: string }) => (
   <div
     className={`w-6 h-6 ${color} rounded-full flex items-center justify-center transform hover:scale-110 transition-transform duration-200 cursor-pointer shadow-lg`}
   >
@@ -75,7 +75,7 @@ const Badge3D = ({ icon: Icon, color }) => (
   </div>
 );
 
-const FlairIcon = ({ flair }) => {
+const FlairIcon = ({ flair }: { flair: string }) => {
   switch (flair) {
     case "trending":
       return <TrendingUp className="h-3 w-3 text-white" />;
@@ -92,7 +92,7 @@ const FlairIcon = ({ flair }) => {
   }
 };
 
-const AnimatedFlair = ({ flair, className = "" }) => {
+const AnimatedFlair = ({ flair, className = "" }: { flair: string; className?: string }) => {
   const flairColors = {
     trending: "from-blue-500 to-blue-700",
     popular: "from-amber-500 to-amber-700",
@@ -106,7 +106,7 @@ const AnimatedFlair = ({ flair, className = "" }) => {
       className={`absolute -top-3 -right-3 inline-flex items-center space-x-1 px-2 py-1 text-xs font-semibold ${className} animate-pulse`}
     >
       <div
-        className={`absolute inset-0 bg-gradient-to-r ${flairColors[flair]} opacity-90 transform rotate-3 rounded-md`}
+        className={`absolute inset-0 bg-gradient-to-r ${flairColors[flair as keyof typeof flairColors]} opacity-90 transform rotate-3 rounded-md`}
         style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}
       ></div>
       <div className="relative z-10 flex items-center space-x-1">
@@ -306,6 +306,7 @@ export default function FeedPage() {
     } else {
       console.log("Post submitted:", postContent);
       setPostContent("");
+      setPosts([]);
     }
   };
 

@@ -30,7 +30,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       let user = null
       console.log(credentials);
       // logic to salt and hash password
-      const pwHash = saltAndHashPassword(credentials.password)
+      // const pwHash = saltAndHashPassword(credentials?.password as string)
 
       // logic to verify if the user exists
       //TODO: Fix this Later
