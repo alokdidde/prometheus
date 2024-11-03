@@ -518,7 +518,7 @@ export default function FeedPage() {
               {posts.map((post) => (
                 <Card
                   key={post.id}
-                  className="sm:px-4 lg:px-2 xl:px-0 mb-8 backdrop-blur-xl bg-white/10 dark:bg-gray-800/10 border border-white/30 dark:border-gray-700/30 shadow-lg relative overflow-visible rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/20 dark:hover:bg-gray-800/20 z-10"
+                  className="mx-4 sm:mx-0 mb-8 backdrop-blur-xl bg-white/10 dark:bg-gray-800/10 border border-white/30 dark:border-gray-700/30 shadow-lg relative overflow-visible rounded-xl transition-all duration-300 hover:shadow-xl hover:bg-white/20 dark:hover:bg-gray-800/20 z-10"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent dark:from-gray-700/10 dark:via-gray-700/5 dark:to-transparent pointer-events-none rounded-xl"></div>
                   <AnimatedFlair flair={post.flair} className="z-10" />
